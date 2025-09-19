@@ -9,17 +9,18 @@ public class DiceMain {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
+        System.out.println();
         System.out.println("Tärningsduellen !!");
         System.out.println("Två spelare, två tärningar var där högst sammanlagda poäng vinner !");
-        System.out.println("-------------------------------------------------------");
+        System.out.println("-------------------------------------------------------------------");
         System.out.println("Player1, skriv in ditt förnamn: ");
         String firstname1 = scanner.nextLine();
 
 
         System.out.println("Player1, skriv in ditt efternamn: ");
-        String lasttname1 = scanner.nextLine();
+        String lastname1 = scanner.nextLine();
 
-        Player player1 = new Player(firstname1, lasttname1);
+        Player player1 = new Player(firstname1, lastname1);
 
         System.out.println("Player2, skriv in ditt förnamn: ");
         String firstname2 = scanner.nextLine();
@@ -54,23 +55,20 @@ public class DiceMain {
             player2.addScore(roll4);
 
             System.out.println();
-            player1.getFullName();
-            System.out.println("slog: " + roll1 + " och " + roll2);
-
-            System.out.println("--------------------------------");
-
-            player2.getFullName();
-            System.out.println("slog: " + roll3 + " och " + roll4);
-
-            System.out.println("--------------------------------");
+            System.out.println(player1.getFullName() + " kastade: " + roll1 + " och " + roll2);
+            System.out.println();
+            System.out.println(player2.getFullName() + " kastade: " + roll3 + " och " + roll4);
+            System.out.println();
+            System.out.println("-----------------------------------------------------------");
+            System.out.println();
         }
         if (player1.getScore() > player2.getScore()) {
-            System.out.println("Vinnare är:");
-            player1.getFullName();
+            System.out.println("++++++ Vinnare är: " + player1.getFullName() + " !! ++++++");
+
         }
         if (player1.getScore() < player2.getScore()) {
-            System.out.println("Vinnare är:");
-            player2.getFullName();
+            System.out.println("++++++ Vinnare är: " + player2.getFullName() + " !! ++++++");
+
 
         }
 

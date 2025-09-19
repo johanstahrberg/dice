@@ -4,37 +4,32 @@ package se.jensen.johan.dicegame;
 public class Player {
 
     private String firstname;
-
-    public Player(int score) {
-        this.score = 0;
-    }
-
-
-    public int getScore() {
-        return score;
-    }
-
-    private int score;
     private String lastname;
+    private int score;
 
-    public String getLastname() {
-        return lastname;
-    }
 
     public String getFirstname() {
         return firstname;
     }
 
+    public String getLastname() {
+        return lastname;
+    }
 
-    public Player(String firstname, String lastname) {
-        this.firstname = firstname;
-
-        this.lastname = lastname;
+    public int getScore() {
+        return score;
     }
 
 
-    public void getFullName() {
-        System.out.println(this.firstname + " " + this.lastname);
+    public Player(String firstname, String lastname) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.score = 0;
+    }
+
+
+    public String getFullName() {
+        return this.firstname + " " + this.lastname;
 
     }
 
